@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Login from '../Form/Login'
 import Register from '../Form/Register'
 import MainLayout from '../Layout/MainLayout'
@@ -11,7 +11,7 @@ import OpenRoute from './OpenRoute'
 const AllRoute = () => {
 
     return (
-        <BrowserRouter>
+        <HashRouter>
 
             <Routes>
                 <Route path="/" element={<OpenRoute><Login /></OpenRoute>} />
@@ -22,7 +22,7 @@ const AllRoute = () => {
                     <Route path="/profile" element={<Profile />} />
                 </Route>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 
